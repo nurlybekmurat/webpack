@@ -1,0 +1,118 @@
+.photo {
+  .address {
+    padding: 80px 0px;
+    @media (max-width: 768px) {
+      padding: 32px 0;
+    }
+  }
+  .address__list {
+    list-style: none;
+    margin: 0;
+  }
+  .address__item {
+    align-items: center;
+    padding: 32px 40px;
+    margin-bottom: unset;
+    border: 1px solid #C0C5C9;
+    border-radius: 24px;
+    @media (max-width: 768px) {
+      padding: 16px;
+    }
+  }
+  .address__item:not(:last-child) {
+    margin-bottom: 24px;
+    @media (max-width: 768px) {
+      margin-bottom: 16px;
+    }
+  }
+  .address__header {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  .address__title {
+    font-family: "Museo Bold";
+    font-size: 32px;
+    line-height: 130%;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 16px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+  }
+  .address__control {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  .address__text {
+    font-size: 22px;
+    line-height: 130%;
+    color: #C0C5C9;
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+  }
+  .address__control-text {
+    font-family: "Museo Bold";
+    font-size: 18px;
+    line-height: 195%;
+    color: #FC6B3F;
+    display: block;
+    margin-right: 10px;
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: #fb8763;
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 135%;
+    }
+  }
+  .address__content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  .address__content--active {
+    overflow: unset;
+    max-height: 1000px;
+    visibility: visible;
+    opacity: 1;
+  }
+  .address__control-icon {
+    transition: transform 0.3s ease-in-out;
+    @media (max-width: 768px) {
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .address__control-icon--active {
+    transform: rotate(180deg);
+  }
+  .address__gallery {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+  }
+  .address__gallery-image {
+    width: unset;
+    max-width: 100%;
+    border-radius: 16px;
+  }
+}
