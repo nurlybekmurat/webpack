@@ -47,15 +47,6 @@ const galleryList = [
       'https://api.technodom.kz/f3/api/v1/images/resp-6.png_b1663abce144a8284ea3c6e1874aac15'
     ]
   },
-  {
-    city: 'Астана',
-    address: 'ТРК «КЕРУЕН» ул. Достық, 9',
-    images: [
-      'https://api.technodom.kz/f3/api/v1/images/keruen-1.png_4ada65a0678292ee31e442ed24905e61',
-      'https://api.technodom.kz/f3/api/v1/images/keruen-2.png_9c77b8efb2719bdbdcacc1fb13459c77',
-      'https://api.technodom.kz/f3/api/v1/images/keruen-3.png_de70cf30a62c55f2c728149532ff0310'
-    ]
-  },
 ]
 
 const addressElementContainer = document.querySelector('.address__list');
@@ -69,7 +60,6 @@ function btnControlHandler(e) {
       e.target.classList.contains('address__control-text') ||
       e.target.classList.contains('address__control-icon')
   ) {
-    console.log(btnText.textContent);
     content.classList.toggle('address__content--active');
     btnArrow.classList.toggle('address__control-icon--active');
     btnText.textContent = btnText.textContent === 'Посмотреть фотографии' ?
